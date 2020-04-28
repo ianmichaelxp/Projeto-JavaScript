@@ -3,6 +3,7 @@ class Negociacao {
         this._data = data;
         this._quantidade = quantidade;
         this._valor = valor;
+        Objective.freeze(this);
     }
     get volume(){
         return this._quantidade * this._valor;
