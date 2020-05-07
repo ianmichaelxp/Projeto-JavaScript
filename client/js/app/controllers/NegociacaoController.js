@@ -6,7 +6,7 @@ class NegociacaoController {
         this._inputData = $('#data');
         this._inputQuantidade = $('#quantidade');
         this._inputValor = $('#valor');
-        this._negociacoes = new ListaNegociacoes(this, function(model){
+        this._negociacoes = new ListaNegociacoes((model) => {
                        
             this._negociacoesView.update(model);
         });
@@ -27,10 +27,6 @@ class NegociacaoController {
         
         this._mensagem.texto = "Negociação adicionada com suscesso!";
         this._mensagensView.update(this._mensagem);
-        
-        console.log(this._negociacoes.listaNegociacoes);
-        console.log(this);
-        
         
         this._limpaFormulario();
     }
