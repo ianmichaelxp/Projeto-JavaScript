@@ -23,6 +23,9 @@ class NegociacaoController {
         
         this._mensagem.texto = "Negociação adicionada com suscesso!";
         this._mensagensView.update(this._mensagem);
+
+        console.log(this._negociacoes.listaNegociacoes);
+        
         
         this._limpaFormulario();
     }
@@ -34,6 +37,16 @@ class NegociacaoController {
             this._inputValor.value
         );
     }
+
+    esvazia(){
+        this._negociacoes.esvazia();
+        this._negociacoesView.update(this._negociacoes);
+
+        this._mensagem.texto = "Lista de negociações apagada com suscesso!";
+        this._mensagensView.update(this._mensagem);
+        console.log(this._negociacoes.listaNegociacoes);
+    }
+
     _limpaFormulario() {
         this._inputData.value = '';
         this._inputQuantidade.value = 1;

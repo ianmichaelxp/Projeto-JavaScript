@@ -11,4 +11,8 @@ class ListaNegociacoes{
         //cria um clone do array
         return [].concat(this._negociacoes);
     }
+
+    esvazia(){
+        this._negociacoes = [];
+    }
 }
